@@ -16,7 +16,6 @@
 
 .container {
     max-width: 960px;
-    width: 100%;
     margin: 0 auto;
 }
 
@@ -128,6 +127,9 @@ ul.menu li a:hover {
     width: 100%;
     height: auto;
 }
+.content-teams-item img {
+    width: 100%;
+}
 .content-teams-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -166,7 +168,7 @@ footer {
 }
 .footer-grid {
     display: grid;
-    grid-template-columns: auto auto auto auto;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 1rem;
 }
 .footer-item h3 {
@@ -202,12 +204,12 @@ footer {
 }
 
 .footer-item form input, .footer-item form textarea {
-    display: block;
     width: 100%;
     background-color: #222;
     color: white;
     padding: 5px 10px;
-    border: 0px;
+    border: none;
+    outline: none;
     border-radius: 5px;
     margin-bottom: 12px;
 }
@@ -235,5 +237,139 @@ footer {
     align-content: center;
 }
 .credit {
-    text-align: right;
+    justify-self: flex-end;
+}
+
+
+@media only screen and (max-width: 480px) {
+    header {
+        height: auto;
+    }
+    .nav-grid {
+        grid-template-columns: 1fr;
+        height: auto;
+        text-align: center;
+    }
+    .logo {
+        margin-bottom: 10px;
+    }
+    ul.menu {
+        grid-template-columns: 1fr;
+    }
+    ul.menu li {
+        margin: 10px;
+    }
+
+    .content-heading {
+        font-size: 36px;
+        margin: 30px 20px;
+    }
+
+    .content-services-grid {
+        grid-template-columns: 1fr;
+        justify-items: center;
+    }
+    .content-services-item {
+        padding: 20px 30px;
+        width: 80%;
+    }
+    .content-services-item h2 {
+        font-size: 22px;
+    }
+
+    .content-meet h1 {
+        font-size: 56px;
+    }
+
+    .content-teams-grid {
+        grid-template-columns: 1fr;
+        justify-items: center;
+    }
+    .content-teams-item {
+        padding: 20px 30px;
+        width: 80%;
+        border: 1px dashed #ccc;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+        margin: auto 16px;
+    }
+    .copyright-grid {
+        grid-template-columns: 1fr;
+    }
+    .copytext {
+        justify-self: center;
+    }
+    .credit {
+        justify-self: center;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    header {
+        height: auto;
+    }
+    .nav-grid {
+        grid-template-columns: 1fr;
+        height: auto;
+        text-align: center;
+    }
+    .logo {
+        margin-bottom: 10px;
+    }
+    ul.menu {
+        grid-template-columns: 1fr;
+    }
+    ul.menu li {
+        margin: 10px;
+    }
+
+    .content-heading {
+        font-size: 40px;
+        margin: 30px 20px;
+        text-align: center;
+    }
+
+    .content-services-grid {
+        grid-template-columns: 1fr 1fr;
+        justify-items: center;
+        column-gap: 0px;
+    }
+    .content-services-item {
+        padding: 20px 30px;
+        width: 80%;
+    }
+    .content-services-item h2 {
+        font-size: 22px;
+    }
+
+    .content-meet h1 {
+        font-size: 56px;
+    }
+
+    .content-teams-grid {
+        grid-template-columns: 1fr 1fr;
+        justify-items: center;
+        column-gap: 0px;
+    }
+    .content-teams-item {
+        padding: 20px 30px;
+        width: 80%;
+        border: 1px dashed #ccc;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr 1fr;
+        margin: auto 30px;
+    }
+    .copyright-grid {
+        grid-template-columns: 1fr;
+    }
+    .copytext {
+        justify-self: center;
+    }
+    .credit {
+        justify-self: center;
+    }
 }
